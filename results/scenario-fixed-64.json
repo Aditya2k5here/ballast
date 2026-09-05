@@ -1,0 +1,846 @@
+{
+ "classes": {
+  "bulk": {
+   "failed": 5992,
+   "ok": 1212,
+   "p99_ns": 2994733056,
+   "sent": 7204,
+   "shed": 0
+  },
+  "critical": {
+   "failed": 186,
+   "ok": 391,
+   "p99_ns": 401604608,
+   "sent": 577,
+   "shed": 0
+  },
+  "standard": {
+   "failed": 1008,
+   "ok": 3211,
+   "p99_ns": 1000341504,
+   "sent": 4219,
+   "shed": 0
+  }
+ },
+ "limit_max": 64,
+ "limit_min": 64,
+ "limiter": "fixed-64",
+ "samples": [
+  {
+   "at_seconds": 0.250708176,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 0.500963069,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 65,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 0.750316206,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 129,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 1.000136966,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 190,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 1.250269997,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 253,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 1.50118092,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 329,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 1.7505052,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 389,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 2.001015074,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 453,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 2.251064514,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 521,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 2.5011188730000002,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 580,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 2.750379764,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 634,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 3.001082589,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 696,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 3.250910104,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 753,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 3.501192325,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 818,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 3.75049774,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 875,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 4.000341174,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 926,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 4.250532538,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 990,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 4.500491933,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1056,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 4.750388535,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1126,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 5.001160658,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1189,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 5.251014074,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1244,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 5.500147837,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1303,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 5.750205479,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1370,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 6.000126129,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1428,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 6.250540955,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1496,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 6.50104976,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1560,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 6.751156079,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1617,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 7.000355543,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1670,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 7.250688737,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1729,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 7.500944637,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1805,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 7.750978373,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1864,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 8.000709393,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 1936,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 8.25115137,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2044,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 8.500189228,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2148,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 8.750180242999999,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2254,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 9.001073612,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2355,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 9.250583776,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2463,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 9.501134793,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2572,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 9.750457649,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2680,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 10.001105362,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2779,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 10.250554419,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2887,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 10.500126554,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 2993,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 10.750244473,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3094,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 11.001300656,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3196,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 11.251249698,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3305,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 11.500592728,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3408,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 11.750831856,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3513,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 12.00031169,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3616,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 12.250655365,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3724,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 12.500582716,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3832,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 12.751139845,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3934,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 13.001097741,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4038,
+   "breaker": "closed",
+   "shed_total": 0
+  },
+  {
+   "at_seconds": 13.250823355,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 45
+  },
+  {
+   "at_seconds": 13.500543068,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 152
+  },
+  {
+   "at_seconds": 13.750320913,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 252
+  },
+  {
+   "at_seconds": 14.000989748,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 351
+  },
+  {
+   "at_seconds": 14.250552684,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 453
+  },
+  {
+   "at_seconds": 14.501112829,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 558
+  },
+  {
+   "at_seconds": 14.75027411,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 662
+  },
+  {
+   "at_seconds": 15.001116274,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 768
+  },
+  {
+   "at_seconds": 15.250676784,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 870
+  },
+  {
+   "at_seconds": 15.500631784,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 976
+  },
+  {
+   "at_seconds": 15.750872470000001,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1079
+  },
+  {
+   "at_seconds": 16.001025896,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1184
+  },
+  {
+   "at_seconds": 16.250585287,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1246
+  },
+  {
+   "at_seconds": 16.500867032,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4095,
+   "breaker": "closed",
+   "shed_total": 1310
+  },
+  {
+   "at_seconds": 16.750532224,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3207,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 17.000594657,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3272,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 17.250751556,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3330,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 17.500691264,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3393,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 17.750256333,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3449,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 18.000327429,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3511,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 18.250150236,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3571,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 18.500658284,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3638,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 18.750451242,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3701,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 19.000986665,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3767,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 19.250227226,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3833,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 19.500215673,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3897,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 19.750283169,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3961,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 20.000120663,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4019,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 20.250301348,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4081,
+   "breaker": "closed",
+   "shed_total": 1322
+  },
+  {
+   "at_seconds": 20.50091412,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4094,
+   "breaker": "closed",
+   "shed_total": 1366
+  },
+  {
+   "at_seconds": 20.750360178,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4095,
+   "breaker": "closed",
+   "shed_total": 1424
+  },
+  {
+   "at_seconds": 21.009540993,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1479
+  },
+  {
+   "at_seconds": 21.250999814,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1550
+  },
+  {
+   "at_seconds": 21.500128894,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4095,
+   "breaker": "closed",
+   "shed_total": 1613
+  },
+  {
+   "at_seconds": 21.750842663,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1682
+  },
+  {
+   "at_seconds": 22.000471847,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1750
+  },
+  {
+   "at_seconds": 22.251020747,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4094,
+   "breaker": "closed",
+   "shed_total": 1810
+  },
+  {
+   "at_seconds": 22.500357179,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4095,
+   "breaker": "closed",
+   "shed_total": 1872
+  },
+  {
+   "at_seconds": 22.75035493,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4095,
+   "breaker": "closed",
+   "shed_total": 1940
+  },
+  {
+   "at_seconds": 23.000718632,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 1999
+  },
+  {
+   "at_seconds": 23.250442436,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 2063
+  },
+  {
+   "at_seconds": 23.500131259,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 2126
+  },
+  {
+   "at_seconds": 23.750886727,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4094,
+   "breaker": "closed",
+   "shed_total": 2179
+  },
+  {
+   "at_seconds": 24.001163194,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4096,
+   "breaker": "closed",
+   "shed_total": 2233
+  },
+  {
+   "at_seconds": 24.250417788,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 4032,
+   "breaker": "closed",
+   "shed_total": 2233
+  },
+  {
+   "at_seconds": 24.500853102,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3972,
+   "breaker": "closed",
+   "shed_total": 2233
+  },
+  {
+   "at_seconds": 24.75091148,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3914,
+   "breaker": "closed",
+   "shed_total": 2233
+  },
+  {
+   "at_seconds": 25.000499632,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3846,
+   "breaker": "closed",
+   "shed_total": 2233
+  },
+  {
+   "at_seconds": 25.250399008,
+   "limit": 64,
+   "in_flight": 64,
+   "queue_depth": 3777,
+   "breaker": "closed",
+   "shed_total": 2233
+  },
+  {
+   "at_seconds": 25.500129666,
+   "limit": 64,
+   "in_flight": 55,
+   "queue_depth": 0,
+   "breaker": "closed",
+   "shed_total": 2233
+  }
+ ]
+}

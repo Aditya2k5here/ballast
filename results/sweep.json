@@ -1,0 +1,1016 @@
+{
+ "backend_workers": 8,
+ "duration_seconds": 5,
+ "fixed_limit": 64,
+ "points": [
+  {
+   "limiter": "fixed-16",
+   "multiplier": 0.5,
+   "offered_rps": 125,
+   "achieved_rps": 124.51651095469884,
+   "final_limit": 16,
+   "classes": {
+    "bulk": {
+     "sent": 371,
+     "ok": 371,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 123994112,
+     "p999_ns": 124898886,
+     "max_ns": 124898886,
+     "ok_p99_ns": 123994112
+    },
+    "critical": {
+     "sent": 35,
+     "ok": 35,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28508160,
+     "p99_ns": 120848384,
+     "p999_ns": 120848384,
+     "max_ns": 120875587,
+     "ok_p99_ns": 120848384
+    },
+    "standard": {
+     "sent": 219,
+     "ok": 219,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 123469824,
+     "p999_ns": 123994112,
+     "max_ns": 124252885,
+     "ok_p99_ns": 123469824
+    }
+   }
+  },
+  {
+   "limiter": "fixed-16",
+   "multiplier": 1,
+   "offered_rps": 250,
+   "achieved_rps": 245.70912503639073,
+   "final_limit": 16,
+   "classes": {
+    "bulk": {
+     "sent": 777,
+     "ok": 777,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 64094208,
+     "p99_ns": 175636480,
+     "p999_ns": 217579520,
+     "max_ns": 228208290,
+     "ok_p99_ns": 175636480
+    },
+    "critical": {
+     "sent": 54,
+     "ok": 54,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 56229888,
+     "p99_ns": 157810688,
+     "p999_ns": 165675977,
+     "max_ns": 165675977,
+     "ok_p99_ns": 157810688
+    },
+    "standard": {
+     "sent": 419,
+     "ok": 419,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 53608448,
+     "p99_ns": 160956416,
+     "p999_ns": 172094588,
+     "max_ns": 172094588,
+     "ok_p99_ns": 160956416
+    }
+   }
+  },
+  {
+   "limiter": "fixed-16",
+   "multiplier": 2,
+   "offered_rps": 500,
+   "achieved_rps": 381.02635632677146,
+   "final_limit": 16,
+   "classes": {
+    "bulk": {
+     "sent": 1530,
+     "ok": 658,
+     "shed": 0,
+     "failed": 872,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 3011510272,
+     "max_ns": 3011548002,
+     "ok_p99_ns": 2910846976
+    },
+    "critical": {
+     "sent": 111,
+     "ok": 111,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 63045632,
+     "p99_ns": 165150720,
+     "p999_ns": 170393600,
+     "max_ns": 170916921,
+     "ok_p99_ns": 165150720
+    },
+    "standard": {
+     "sent": 859,
+     "ok": 859,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 64880640,
+     "p99_ns": 181927936,
+     "p999_ns": 330301440,
+     "max_ns": 348917935,
+     "ok_p99_ns": 181927936
+    }
+   }
+  },
+  {
+   "limiter": "fixed-16",
+   "multiplier": 4,
+   "offered_rps": 1000,
+   "achieved_rps": 690.764729982598,
+   "final_limit": 16,
+   "classes": {
+    "bulk": {
+     "sent": 3009,
+     "ok": 486,
+     "shed": 0,
+     "failed": 2523,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 3011510272,
+     "max_ns": 3017344514,
+     "ok_p99_ns": 2961178624
+    },
+    "critical": {
+     "sent": 231,
+     "ok": 231,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 62521344,
+     "p99_ns": 166199296,
+     "p999_ns": 189267968,
+     "max_ns": 189646440,
+     "ok_p99_ns": 166199296
+    },
+    "standard": {
+     "sent": 1760,
+     "ok": 1108,
+     "shed": 0,
+     "failed": 652,
+     "p50_ns": 77856768,
+     "p99_ns": 1000341504,
+     "p999_ns": 1008730112,
+     "max_ns": 1017086601,
+     "ok_p99_ns": 874512384
+    }
+   }
+  },
+  {
+   "limiter": "fixed-16",
+   "multiplier": 8,
+   "offered_rps": 2000,
+   "achieved_rps": 1315.7934563832462,
+   "final_limit": 16,
+   "classes": {
+    "bulk": {
+     "sent": 6040,
+     "ok": 481,
+     "shed": 4639,
+     "failed": 920,
+     "p50_ns": 1858076672,
+     "p99_ns": 2994733056,
+     "p999_ns": 2994733056,
+     "max_ns": 3001295856,
+     "ok_p99_ns": 2977955840
+    },
+    "critical": {
+     "sent": 480,
+     "ok": 480,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 64618496,
+     "p99_ns": 165150720,
+     "p999_ns": 185073664,
+     "max_ns": 185552874,
+     "ok_p99_ns": 165150720
+    },
+    "standard": {
+     "sent": 3480,
+     "ok": 943,
+     "shed": 0,
+     "failed": 2537,
+     "p50_ns": 1000341504,
+     "p99_ns": 1004535808,
+     "p999_ns": 1012924416,
+     "max_ns": 1018443334,
+     "ok_p99_ns": 945815552
+    }
+   }
+  },
+  {
+   "limiter": "fixed-16",
+   "multiplier": 12,
+   "offered_rps": 3000,
+   "achieved_rps": 2582.3625700329203,
+   "final_limit": 16,
+   "classes": {
+    "bulk": {
+     "sent": 9037,
+     "ok": 11,
+     "shed": 9026,
+     "failed": 0,
+     "p50_ns": 635437056,
+     "p99_ns": 1463812096,
+     "p999_ns": 1480589312,
+     "max_ns": 1484450257,
+     "ok_p99_ns": 54919168
+    },
+    "critical": {
+     "sent": 735,
+     "ok": 735,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 65929216,
+     "p99_ns": 179830784,
+     "p999_ns": 219676672,
+     "max_ns": 220040671,
+     "ok_p99_ns": 179830784
+    },
+    "standard": {
+     "sent": 5229,
+     "ok": 709,
+     "shed": 0,
+     "failed": 4520,
+     "p50_ns": 1000341504,
+     "p99_ns": 1008730112,
+     "p999_ns": 1017118720,
+     "max_ns": 1023500957,
+     "ok_p99_ns": 975175680
+    }
+   }
+  },
+  {
+   "limiter": "fixed-64",
+   "multiplier": 0.5,
+   "offered_rps": 125,
+   "achieved_rps": 124.50640052573192,
+   "final_limit": 64,
+   "classes": {
+    "bulk": {
+     "sent": 371,
+     "ok": 371,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28246016,
+     "p99_ns": 123994112,
+     "p999_ns": 124949420,
+     "max_ns": 124949420,
+     "ok_p99_ns": 123994112
+    },
+    "critical": {
+     "sent": 35,
+     "ok": 35,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28114944,
+     "p99_ns": 121896960,
+     "p999_ns": 121896960,
+     "max_ns": 122063901,
+     "ok_p99_ns": 121896960
+    },
+    "standard": {
+     "sent": 219,
+     "ok": 219,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 123469824,
+     "p999_ns": 123994112,
+     "max_ns": 124253267,
+     "ok_p99_ns": 123469824
+    }
+   }
+  },
+  {
+   "limiter": "fixed-64",
+   "multiplier": 1,
+   "offered_rps": 250,
+   "achieved_rps": 245.72076892675247,
+   "final_limit": 64,
+   "classes": {
+    "bulk": {
+     "sent": 777,
+     "ok": 777,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 64094208,
+     "p99_ns": 185073664,
+     "p999_ns": 203948032,
+     "max_ns": 206600685,
+     "ok_p99_ns": 185073664
+    },
+    "critical": {
+     "sent": 54,
+     "ok": 54,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 69992448,
+     "p99_ns": 122421248,
+     "p999_ns": 166199296,
+     "max_ns": 166318512,
+     "ok_p99_ns": 122421248
+    },
+    "standard": {
+     "sent": 419,
+     "ok": 419,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 54394880,
+     "p99_ns": 174587904,
+     "p999_ns": 188173156,
+     "max_ns": 188173156,
+     "ok_p99_ns": 174587904
+    }
+   }
+  },
+  {
+   "limiter": "fixed-64",
+   "multiplier": 2,
+   "offered_rps": 500,
+   "achieved_rps": 376.650283253676,
+   "final_limit": 64,
+   "classes": {
+    "bulk": {
+     "sent": 1530,
+     "ok": 687,
+     "shed": 0,
+     "failed": 843,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 3011510272,
+     "max_ns": 3019310397,
+     "ok_p99_ns": 2944401408
+    },
+    "critical": {
+     "sent": 111,
+     "ok": 111,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 260571136,
+     "p99_ns": 311427072,
+     "p999_ns": 315621376,
+     "max_ns": 316383118,
+     "ok_p99_ns": 311427072
+    },
+    "standard": {
+     "sent": 859,
+     "ok": 859,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 257425408,
+     "p99_ns": 378535936,
+     "p999_ns": 449839104,
+     "max_ns": 454500358,
+     "ok_p99_ns": 378535936
+    }
+   }
+  },
+  {
+   "limiter": "fixed-64",
+   "multiplier": 4,
+   "offered_rps": 1000,
+   "achieved_rps": 686.3361119420216,
+   "final_limit": 64,
+   "classes": {
+    "bulk": {
+     "sent": 3009,
+     "ok": 511,
+     "shed": 0,
+     "failed": 2498,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 3028287488,
+     "max_ns": 3030056515,
+     "ok_p99_ns": 2961178624
+    },
+    "critical": {
+     "sent": 231,
+     "ok": 230,
+     "shed": 0,
+     "failed": 1,
+     "p50_ns": 258473984,
+     "p99_ns": 374341632,
+     "p999_ns": 399507456,
+     "max_ns": 400356390,
+     "ok_p99_ns": 365953024
+    },
+    "standard": {
+     "sent": 1760,
+     "ok": 1091,
+     "shed": 0,
+     "failed": 669,
+     "p50_ns": 288358400,
+     "p99_ns": 1000341504,
+     "p999_ns": 1017118720,
+     "max_ns": 1028666508,
+     "ok_p99_ns": 920649728
+    }
+   }
+  },
+  {
+   "limiter": "fixed-64",
+   "multiplier": 8,
+   "offered_rps": 2000,
+   "achieved_rps": 1313.9946064994242,
+   "final_limit": 64,
+   "classes": {
+    "bulk": {
+     "sent": 6040,
+     "ok": 502,
+     "shed": 4589,
+     "failed": 949,
+     "p50_ns": 1866465280,
+     "p99_ns": 2994733056,
+     "p999_ns": 2994733056,
+     "max_ns": 3001314781,
+     "ok_p99_ns": 2977955840
+    },
+    "critical": {
+     "sent": 480,
+     "ok": 480,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 259522560,
+     "p99_ns": 368050176,
+     "p999_ns": 388988499,
+     "max_ns": 388988499,
+     "ok_p99_ns": 368050176
+    },
+    "standard": {
+     "sent": 3480,
+     "ok": 924,
+     "shed": 0,
+     "failed": 2556,
+     "p50_ns": 1000341504,
+     "p99_ns": 1000341504,
+     "p999_ns": 1012924416,
+     "max_ns": 1014536590,
+     "ok_p99_ns": 933232640
+    }
+   }
+  },
+  {
+   "limiter": "fixed-64",
+   "multiplier": 12,
+   "offered_rps": 3000,
+   "achieved_rps": 2567.4775028989916,
+   "final_limit": 64,
+   "classes": {
+    "bulk": {
+     "sent": 9037,
+     "ok": 41,
+     "shed": 8996,
+     "failed": 0,
+     "p50_ns": 631242752,
+     "p99_ns": 1480589312,
+     "p999_ns": 1497366528,
+     "max_ns": 1498378766,
+     "ok_p99_ns": 306451474
+    },
+    "critical": {
+     "sent": 735,
+     "ok": 731,
+     "shed": 0,
+     "failed": 4,
+     "p50_ns": 262668288,
+     "p99_ns": 384827392,
+     "p999_ns": 409993216,
+     "max_ns": 414618637,
+     "ok_p99_ns": 380633088
+    },
+    "standard": {
+     "sent": 5229,
+     "ok": 686,
+     "shed": 0,
+     "failed": 4543,
+     "p50_ns": 1000341504,
+     "p99_ns": 1008730112,
+     "p999_ns": 1021313024,
+     "max_ns": 1025156594,
+     "ok_p99_ns": 970981376
+    }
+   }
+  },
+  {
+   "limiter": "fixed-256",
+   "multiplier": 0.5,
+   "offered_rps": 125,
+   "achieved_rps": 124.53594683220017,
+   "final_limit": 256,
+   "classes": {
+    "bulk": {
+     "sent": 371,
+     "ok": 371,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 123994112,
+     "p999_ns": 125042688,
+     "max_ns": 125053690,
+     "ok_p99_ns": 123994112
+    },
+    "critical": {
+     "sent": 35,
+     "ok": 35,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28246016,
+     "p99_ns": 122363779,
+     "p999_ns": 122363779,
+     "max_ns": 122363779,
+     "ok_p99_ns": 122363779
+    },
+    "standard": {
+     "sent": 219,
+     "ok": 219,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28246016,
+     "p99_ns": 123994112,
+     "p999_ns": 124882574,
+     "max_ns": 124882574,
+     "ok_p99_ns": 123994112
+    }
+   }
+  },
+  {
+   "limiter": "fixed-256",
+   "multiplier": 1,
+   "offered_rps": 250,
+   "achieved_rps": 245.75653643417797,
+   "final_limit": 256,
+   "classes": {
+    "bulk": {
+     "sent": 777,
+     "ok": 777,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 62521344,
+     "p99_ns": 185073664,
+     "p999_ns": 201850880,
+     "max_ns": 207601247,
+     "ok_p99_ns": 185073664
+    },
+    "critical": {
+     "sent": 54,
+     "ok": 54,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 67371008,
+     "p99_ns": 120324096,
+     "p999_ns": 163053568,
+     "max_ns": 163208145,
+     "ok_p99_ns": 120324096
+    },
+    "standard": {
+     "sent": 419,
+     "ok": 419,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 54394880,
+     "p99_ns": 180879360,
+     "p999_ns": 194510848,
+     "max_ns": 194807341,
+     "ok_p99_ns": 180879360
+    }
+   }
+  },
+  {
+   "limiter": "fixed-256",
+   "multiplier": 2,
+   "offered_rps": 500,
+   "achieved_rps": 360.05242494654345,
+   "final_limit": 256,
+   "classes": {
+    "bulk": {
+     "sent": 1530,
+     "ok": 915,
+     "shed": 0,
+     "failed": 615,
+     "p50_ns": 1841299456,
+     "p99_ns": 2994733056,
+     "p999_ns": 3011510272,
+     "max_ns": 3015966443,
+     "ok_p99_ns": 2927624192
+    },
+    "critical": {
+     "sent": 111,
+     "ok": 7,
+     "shed": 0,
+     "failed": 104,
+     "p50_ns": 401604608,
+     "p99_ns": 401604608,
+     "p999_ns": 403701760,
+     "max_ns": 404168239,
+     "ok_p99_ns": 390619937
+    },
+    "standard": {
+     "sent": 859,
+     "ok": 812,
+     "shed": 0,
+     "failed": 47,
+     "p50_ns": 920649728,
+     "p99_ns": 1000341504,
+     "p999_ns": 1004535808,
+     "max_ns": 1017857387,
+     "ok_p99_ns": 996147200
+    }
+   }
+  },
+  {
+   "limiter": "fixed-256",
+   "multiplier": 4,
+   "offered_rps": 1000,
+   "achieved_rps": 674.7593481041329,
+   "final_limit": 256,
+   "classes": {
+    "bulk": {
+     "sent": 3009,
+     "ok": 562,
+     "shed": 0,
+     "failed": 2447,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 2994733056,
+     "max_ns": 3003347167,
+     "ok_p99_ns": 2961178624
+    },
+    "critical": {
+     "sent": 231,
+     "ok": 4,
+     "shed": 0,
+     "failed": 227,
+     "p50_ns": 401604608,
+     "p99_ns": 401604608,
+     "p999_ns": 403442329,
+     "max_ns": 403442329,
+     "ok_p99_ns": 367140053
+    },
+    "standard": {
+     "sent": 1760,
+     "ok": 1292,
+     "shed": 0,
+     "failed": 468,
+     "p50_ns": 929038336,
+     "p99_ns": 1000341504,
+     "p999_ns": 1004535808,
+     "max_ns": 1020742570,
+     "ok_p99_ns": 991952896
+    }
+   }
+  },
+  {
+   "limiter": "fixed-256",
+   "multiplier": 8,
+   "offered_rps": 2000,
+   "achieved_rps": 1308.577740422879,
+   "final_limit": 256,
+   "classes": {
+    "bulk": {
+     "sent": 6040,
+     "ok": 587,
+     "shed": 3956,
+     "failed": 1497,
+     "p50_ns": 2172649472,
+     "p99_ns": 2994733056,
+     "p999_ns": 2994733056,
+     "max_ns": 3001487577,
+     "ok_p99_ns": 2977955840
+    },
+    "critical": {
+     "sent": 480,
+     "ok": 3,
+     "shed": 0,
+     "failed": 477,
+     "p50_ns": 401604608,
+     "p99_ns": 405798912,
+     "p999_ns": 415582823,
+     "max_ns": 415582823,
+     "ok_p99_ns": 221393582
+    },
+    "standard": {
+     "sent": 3480,
+     "ok": 1317,
+     "shed": 0,
+     "failed": 2163,
+     "p50_ns": 1000341504,
+     "p99_ns": 1004535808,
+     "p999_ns": 1012924416,
+     "max_ns": 1014873171,
+     "ok_p99_ns": 983564288
+    }
+   }
+  },
+  {
+   "limiter": "fixed-256",
+   "multiplier": 12,
+   "offered_rps": 3000,
+   "achieved_rps": 2268.4120614692356,
+   "final_limit": 256,
+   "classes": {
+    "bulk": {
+     "sent": 9037,
+     "ok": 316,
+     "shed": 8721,
+     "failed": 0,
+     "p50_ns": 819986432,
+     "p99_ns": 1530920960,
+     "p999_ns": 1631584256,
+     "max_ns": 1690310563,
+     "ok_p99_ns": 1648361472
+    },
+    "critical": {
+     "sent": 735,
+     "ok": 3,
+     "shed": 0,
+     "failed": 732,
+     "p50_ns": 399507456,
+     "p99_ns": 412090368,
+     "p999_ns": 420478976,
+     "max_ns": 423805799,
+     "ok_p99_ns": 223870976
+    },
+    "standard": {
+     "sent": 5229,
+     "ok": 1324,
+     "shed": 0,
+     "failed": 3905,
+     "p50_ns": 1000341504,
+     "p99_ns": 1008730112,
+     "p999_ns": 1017118720,
+     "max_ns": 1041564359,
+     "ok_p99_ns": 966787072
+    }
+   }
+  },
+  {
+   "limiter": "gradient",
+   "multiplier": 0.5,
+   "offered_rps": 125,
+   "achieved_rps": 124.51252804884506,
+   "final_limit": 28,
+   "classes": {
+    "bulk": {
+     "sent": 371,
+     "ok": 371,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 124518400,
+     "p999_ns": 125010332,
+     "max_ns": 125010332,
+     "ok_p99_ns": 124518400
+    },
+    "critical": {
+     "sent": 35,
+     "ok": 35,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 121372672,
+     "p999_ns": 121372672,
+     "max_ns": 121616473,
+     "ok_p99_ns": 121372672
+    },
+    "standard": {
+     "sent": 219,
+     "ok": 219,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 28377088,
+     "p99_ns": 123469824,
+     "p999_ns": 124497296,
+     "max_ns": 124497296,
+     "ok_p99_ns": 123469824
+    }
+   }
+  },
+  {
+   "limiter": "gradient",
+   "multiplier": 1,
+   "offered_rps": 250,
+   "achieved_rps": 245.65993047923408,
+   "final_limit": 23,
+   "classes": {
+    "bulk": {
+     "sent": 777,
+     "ok": 777,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 68419584,
+     "p99_ns": 179830784,
+     "p999_ns": 208142336,
+     "max_ns": 220899393,
+     "ok_p99_ns": 179830784
+    },
+    "critical": {
+     "sent": 54,
+     "ok": 54,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 65667072,
+     "p99_ns": 164102144,
+     "p999_ns": 178782208,
+     "max_ns": 178908576,
+     "ok_p99_ns": 164102144
+    },
+    "standard": {
+     "sent": 419,
+     "ok": 419,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 61734912,
+     "p99_ns": 177733632,
+     "p999_ns": 192952138,
+     "max_ns": 192952138,
+     "ok_p99_ns": 177733632
+    }
+   }
+  },
+  {
+   "limiter": "gradient",
+   "multiplier": 2,
+   "offered_rps": 500,
+   "achieved_rps": 380.11596399631236,
+   "final_limit": 17,
+   "classes": {
+    "bulk": {
+     "sent": 1530,
+     "ok": 661,
+     "shed": 0,
+     "failed": 869,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 3011510272,
+     "max_ns": 3019694896,
+     "ok_p99_ns": 2927624192
+    },
+    "critical": {
+     "sent": 111,
+     "ok": 111,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 79953920,
+     "p99_ns": 191365120,
+     "p999_ns": 201406269,
+     "max_ns": 201406269,
+     "ok_p99_ns": 191365120
+    },
+    "standard": {
+     "sent": 859,
+     "ok": 859,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 79429632,
+     "p99_ns": 219676672,
+     "p999_ns": 332398592,
+     "max_ns": 335145992,
+     "ok_p99_ns": 219676672
+    }
+   }
+  },
+  {
+   "limiter": "gradient",
+   "multiplier": 4,
+   "offered_rps": 1000,
+   "achieved_rps": 690.1109119508989,
+   "final_limit": 17,
+   "classes": {
+    "bulk": {
+     "sent": 3009,
+     "ok": 490,
+     "shed": 0,
+     "failed": 2519,
+     "p50_ns": 2994733056,
+     "p99_ns": 2994733056,
+     "p999_ns": 3011510272,
+     "max_ns": 3015519929,
+     "ok_p99_ns": 2977955840
+    },
+    "critical": {
+     "sent": 231,
+     "ok": 231,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 77856768,
+     "p99_ns": 178782208,
+     "p999_ns": 190316544,
+     "max_ns": 190439515,
+     "ok_p99_ns": 178782208
+    },
+    "standard": {
+     "sent": 1760,
+     "ok": 1104,
+     "shed": 0,
+     "failed": 656,
+     "p50_ns": 96206848,
+     "p99_ns": 1000341504,
+     "p999_ns": 1004535808,
+     "max_ns": 1014452062,
+     "ok_p99_ns": 874512384
+    }
+   }
+  },
+  {
+   "limiter": "gradient",
+   "multiplier": 8,
+   "offered_rps": 2000,
+   "achieved_rps": 1316.3639520602621,
+   "final_limit": 17,
+   "classes": {
+    "bulk": {
+     "sent": 6040,
+     "ok": 485,
+     "shed": 4640,
+     "failed": 915,
+     "p50_ns": 1858076672,
+     "p99_ns": 2994733056,
+     "p999_ns": 2994733056,
+     "max_ns": 3001546704,
+     "ok_p99_ns": 2977955840
+    },
+    "critical": {
+     "sent": 480,
+     "ok": 480,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 78905344,
+     "p99_ns": 186122240,
+     "p999_ns": 209190912,
+     "max_ns": 209249782,
+     "ok_p99_ns": 186122240
+    },
+    "standard": {
+     "sent": 3480,
+     "ok": 936,
+     "shed": 0,
+     "failed": 2544,
+     "p50_ns": 1000341504,
+     "p99_ns": 1000341504,
+     "p999_ns": 1012924416,
+     "max_ns": 1021168712,
+     "ok_p99_ns": 924844032
+    }
+   }
+  },
+  {
+   "limiter": "gradient",
+   "multiplier": 12,
+   "offered_rps": 3000,
+   "achieved_rps": 2581.9411058294,
+   "final_limit": 17,
+   "classes": {
+    "bulk": {
+     "sent": 9037,
+     "ok": 14,
+     "shed": 9023,
+     "failed": 0,
+     "p50_ns": 631242752,
+     "p99_ns": 1463812096,
+     "p999_ns": 1480589312,
+     "max_ns": 1484145137,
+     "ok_p99_ns": 75601556
+    },
+    "critical": {
+     "sent": 735,
+     "ok": 735,
+     "shed": 0,
+     "failed": 0,
+     "p50_ns": 79953920,
+     "p99_ns": 207093760,
+     "p999_ns": 251133952,
+     "max_ns": 276809282,
+     "ok_p99_ns": 207093760
+    },
+    "standard": {
+     "sent": 5229,
+     "ok": 708,
+     "shed": 0,
+     "failed": 4521,
+     "p50_ns": 1000341504,
+     "p99_ns": 1004535808,
+     "p999_ns": 1017118720,
+     "max_ns": 1030732439,
+     "ok_p99_ns": 970981376
+    }
+   }
+  }
+ ],
+ "rated_rps": 250
+}
