@@ -1,6 +1,6 @@
 // Package breaker stops sending requests to an upstream that is not answering.
 //
-// The value of a circuit breaker is not that it protects the upstream — the
+// The value of a circuit breaker is not that it protects the upstream, the
 // upstream is already down. It is that it protects the *caller*: an open
 // breaker turns a ten-second timeout into an immediate error, which frees the
 // concurrency slot, which keeps the queue behind it from growing, which is what

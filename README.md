@@ -1,6 +1,6 @@
 # ballast
 
-An API gateway that decides, under overload, **which requests to fail** — and an
+An API gateway that decides, under overload, **which requests to fail**, and an
 experiment measuring whether adaptive concurrency control is actually worth
 having.
 
@@ -35,7 +35,7 @@ client                    B A L L A S T                          upstream
 
 - **Adaptive concurrency**, not a fixed pool. A gradient controller compares
   recent round-trip latency against the shortest it has seen and scales the
-  in-flight limit by the ratio — the concurrency at the knee of the throughput
+  in-flight limit by the ratio, the concurrency at the knee of the throughput
   curve, which is Little's Law read backwards. Upward movement requires the
   limit to actually be *binding*: inflating a number nothing is reaching only
   gives you a greater height to fall from.
@@ -44,12 +44,12 @@ client                    B A L L A S T                          upstream
   Work done for a client that has gone is not merely wasted, it is load with
   negative value.
 - **Priority shedding with a LIFO tail.** Tiers decide who gives way. Past a
-  depth threshold each tier serves *newest* first — counter-intuitive, but the
+  depth threshold each tier serves *newest* first. Counter-intuitive, but the
   oldest waiter is closest to timing out, so FIFO under overload spends capacity
   on answers nobody is waiting for. Below the threshold it returns to FIFO.
 - **Retry budgets**, not retry counts. Retries draw from a shared allowance
   (10% of originals over a sliding window). As failures rise, originals stay
-  flat, so the allowance stays flat — retry load is bounded exactly when it
+  flat, so the allowance stays flat. Retry load is bounded exactly when it
   would otherwise compound.
 
 No third-party dependencies. `go build ./...` and nothing else.
@@ -64,7 +64,7 @@ deadlines of 400 ms / 1 s / 3 s.
 ### 1. Latency and success against offered load
 
 `critical p99` is measured from each request's **intended send time**, not from
-when it was actually sent — see "coordinated omission" below.
+when it was actually sent. See "coordinated omission" below.
 
 | limiter | 1× | 2× | 4× | 8× | 12× | critical served at 12× |
 |---|---:|---:|---:|---:|---:|---:|
@@ -75,7 +75,7 @@ when it was actually sent — see "coordinated omission" below.
 
 `fixed-256` is the failure this project is about. The limit is high enough that
 it never limits anything, so the backend's own queue absorbs the flood, so every
-request blows past its deadline. 99.6% of the most important traffic is lost —
+request blows past its deadline. 99.6% of the most important traffic is lost,
 not shed, *lost*, after the work was already done for it.
 
 `fixed-16` is the uncomfortable row. It happens to be near-optimal for this
@@ -97,7 +97,7 @@ Again: the adaptive controller matches the good constant and rescues the bad
 one. It tracked the degradation down to 13 and back up to 31 without being told
 anything had happened.
 
-### 3. When the *capacity* changes — the case no constant survives
+### 3. When the *capacity* changes, the case no constant survives
 
 The backend goes 8 → 64 → 8 workers mid-run, at 1600 rps offered. Now a limit
 tuned for eight workers wastes seven eighths of the capacity when it arrives,
@@ -110,7 +110,7 @@ and one tuned for sixty-four floods the backend when it leaves.
 | `fixed-256` | 18,495 | 256 → 256 |
 | `gradient` | 15,459 | **17 → 106** |
 
-The adaptive controller found the extra capacity — 17 up to 106 — and served
+The adaptive controller found the extra capacity. 17 up to 106, and served
 91% more than the constant that was correct a moment earlier. It still trails
 the high constants on raw throughput here, because this backend has a very deep
 internal queue and throughput is all this row measures. **That gap is a real
@@ -119,7 +119,7 @@ cannot exploit a step change as fast as a limit that was already too big.
 
 Fixing the probe rate was worth measuring: before adding multiplicative growth
 when the limit is binding, the controller crawled 17 → 41 and served 10,861.
-After, 17 → 106 and 15,459 — a 43% improvement from four lines.
+After, 17 → 106 and 15,459, a 43% improvement from four lines.
 
 ## Coordinated omission
 
@@ -127,7 +127,7 @@ The load generator is **open-loop**: requests are issued on a fixed schedule
 whether or not earlier ones have returned, and latency is measured from the
 moment each was *due*.
 
-A closed-loop generator — N workers looping send-wait-send — slows down when the
+A closed-loop generator. N workers looping send-wait-send. Slows down when the
 server does. It stops offering the load you configured and starts offering
 whatever the server will accept, and the requests that would have been slowest
 are the ones never sent. The result is a load test that reports a healthy p99
@@ -180,7 +180,7 @@ $ curl -XPOST localhost:9102/profile -d '{"workers":8,"fast":"25ms","slow":"120m
 - **One route, one upstream.** Routing is not the subject; the control loop is.
 - **Responses are buffered, not streamed**, so a failed attempt can be replaced
   by a retry without the client having already seen the error. A streaming
-  gateway has to give up retries instead — the trade should be made
+  gateway has to give up retries instead, the trade should be made
   deliberately, and here it is made in favour of retries.
 - **The controller's window is 500 ms.** It cannot react faster than that, which
   section 3 shows costing real throughput on a step change in capacity.

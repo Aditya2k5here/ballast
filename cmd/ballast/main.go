@@ -1,6 +1,6 @@
 // Command ballast is the gateway.
 //
-// One route, one upstream, one limiter -- deliberately, because the experiment
+// One route, one upstream, one limiter. Deliberately, because the experiment
 // is about the control loop rather than about routing. Everything the operator
 // needs is on the admin port: Prometheus metrics, and a snapshot endpoint that
 // prints the same numbers in a form a human can read during an incident.
@@ -94,7 +94,7 @@ func main() {
 	}()
 
 	// Graceful shutdown: stop accepting, let in-flight work finish, then go.
-	// Draining the queue first matters -- anything still waiting for capacity
+	// Draining the queue first matters. Anything still waiting for capacity
 	// will never get it, and telling it so immediately beats letting it time out.
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, os.Interrupt, syscall.SIGTERM)

@@ -3,12 +3,12 @@
 // Per-call retry policies are the standard way to turn a partial outage into a
 // total one. Every caller independently decides that three attempts is
 // reasonable, and when the upstream starts failing, offered load triples at
-// exactly the moment capacity has fallen — so more requests fail, so more are
+// exactly the moment capacity has fallen, so more requests fail, so more are
 // retried. The system is now doing its maximum possible work and completing
 // almost none of it.
 //
-// A budget removes the coupling. Retries draw from a shared allowance —
-// typically ten percent of original requests over a sliding window — and when
+// A budget removes the coupling. Retries draw from a shared allowance.
+// typically ten percent of original requests over a sliding window, and when
 // the allowance is gone, retries simply stop. The important property is what
 // happens at the worst moment: as failures rise, originals stay flat, so the
 // allowance stays flat, so retry load is bounded no matter how bad it gets.

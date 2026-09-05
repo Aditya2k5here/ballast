@@ -5,7 +5,7 @@
 // one most load tests get wrong.
 //
 // A closed-loop generator runs N workers in a loop: send, wait for the reply,
-// send again. When the server slows down, the generator slows down with it — it
+// send again. When the server slows down, the generator slows down with it. It
 // simply issues fewer requests. So the offered load is not the load you
 // configured, it is whatever the server felt like accepting, and the recorded
 // latencies are only the latencies of requests the server had capacity for. The

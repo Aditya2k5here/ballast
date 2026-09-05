@@ -12,8 +12,8 @@
 // to raise it. That single property is what makes the resulting latency-versus-
 // load curve worth plotting.
 //
-// On top of that, service time is drawn from a bimodal distribution — most
-// requests fast, a programmable fraction slow — because a unimodal latency
+// On top of that, service time is drawn from a bimodal distribution. Most
+// requests fast, a programmable fraction slow, because a unimodal latency
 // distribution has no tail, and a tail is the thing being measured.
 package upstream
 

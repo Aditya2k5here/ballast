@@ -5,7 +5,7 @@
 // the knee of its throughput curve. Little's Law says that concurrency is
 // throughput times latency, so if the system's capacity is fixed, pushing
 // concurrency past the knee cannot raise throughput and can only raise latency
-// — every extra request in flight is a request queued behind the others.
+// . Every extra request in flight is a request queued behind the others.
 //
 // A fixed MaxConns is a guess at that number. It is right for one backend on
 // one day, and it is wrong in both directions: too low leaves capacity unused,
@@ -103,7 +103,7 @@ func DefaultGradient() GradientConfig {
 // longer-lived floor. The ratio is the "gradient": 1.0 means no queueing has
 // appeared, below 1.0 means latency has grown and the limit should shrink in
 // proportion. A square-root headroom term is added so the limit keeps probing
-// upwards — without it the controller settles at whatever it first found and
+// upwards. Without it the controller settles at whatever it first found and
 // never discovers that the upstream recovered.
 type Gradient struct {
 	cfg GradientConfig
@@ -161,8 +161,8 @@ func (g *Gradient) release(rtt time.Duration, dropped bool) {
 	g.inFlight--
 
 	if dropped {
-		// A failed request tells us nothing about latency under load — it may
-		// have been fast precisely because it failed — but it is strong
+		// A failed request tells us nothing about latency under load. It may
+		// have been fast precisely because it failed, but it is strong
 		// evidence about capacity, so it is counted separately.
 		g.winDrops++
 	} else {
@@ -220,8 +220,8 @@ func (g *Gradient) recompute(now time.Time) {
 	// controller crawled from 17 to 41 before the capacity went away again,
 	// leaving most of it unused.
 	//
-	// So when there is no sign of queueing *and* the limit is actually binding —
-	// in-flight has been pressed right up against it — the step becomes
+	// So when there is no sign of queueing *and* the limit is actually binding.
+	// in-flight has been pressed right up against it, the step becomes
 	// multiplicative. Both conditions matter: raising a limit that nothing is
 	// reaching achieves nothing except a larger number to fall from later.
 	headroom := math.Sqrt(g.limit)

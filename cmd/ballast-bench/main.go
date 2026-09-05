@@ -241,7 +241,7 @@ func runScenario(mode string, fixedLimit int, dur time.Duration) (
 // well-chosen constant, because the sweep and the latency fault do not.
 //
 // Both of those hold the backend's capacity fixed, and against a fixed backend
-// a tuned constant is simply correct -- fixed-16 matched the gradient limiter
+// a tuned constant is simply correct. Fixed-16 matched the gradient limiter
 // on every point. That is worth saying plainly: adaptive concurrency does not
 // beat a well-tuned limit on a system that never changes.
 //

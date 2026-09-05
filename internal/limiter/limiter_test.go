@@ -167,7 +167,7 @@ func TestGradientBacksOffWhenEverythingFails(t *testing.T) {
 }
 
 // A limit that is not being reached is not the constraint, so raising it is
-// pointless -- and worse, it is a larger number to fall from when load arrives.
+// pointless, and worse, it is a larger number to fall from when load arrives.
 func TestGradientDoesNotGrowWhenItsLimitIsNotBinding(t *testing.T) {
 	g, c := newTestGradient()
 	before := g.Limit()

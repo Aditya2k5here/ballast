@@ -17,7 +17,7 @@ A gradient controller sets the in-flight limit from observed round-trip latency:
 compare the recent minimum RTT against a longer-lived floor, scale the limit by
 the ratio, and probe upwards when nothing is queueing.
 
-Upward movement is gated on the limit being *binding* — in-flight pressed to
+Upward movement is gated on the limit being *binding*. In-flight pressed to
 within 90% of it. Downward movement is not gated, because latency can rise for
 reasons this limiter is not causing and the limit should still come down.
 

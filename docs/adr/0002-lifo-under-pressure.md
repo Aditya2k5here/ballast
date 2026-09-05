@@ -23,8 +23,8 @@ Each tier serves newest-first once total queue depth exceeds `LIFOAbove`
 - Under normal load nothing changes, so the unfairness is confined to the
   situation that justifies it.
 - Some requests are starved: a waiter that arrives just as the queue deepens can
-  sit behind every later arrival. Deadline expiry bounds how long that lasts —
-  a starved request is refused, not held forever — but it is a real cost and the
+  sit behind every later arrival. Deadline expiry bounds how long that lasts,
+a starved request is refused, not held forever, but it is a real cost and the
   threshold exists so it is paid only when it buys something.
 - The alternative considered was to sort by remaining deadline, which is
   strictly better and needs a heap per tier rather than a list. It was not worth

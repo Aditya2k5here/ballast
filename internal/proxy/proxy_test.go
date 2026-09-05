@@ -113,7 +113,7 @@ func TestUnderOverloadCriticalSurvivesAndBulkIsShed(t *testing.T) {
 	}
 	time.Sleep(30 * time.Millisecond)
 	// As many critical requests as the queue can hold at once. More than that
-	// and some must be refused however they are prioritised -- the queue is a
+	// and some must be refused however they are prioritised, the queue is a
 	// bounded resource, and priority decides who occupies it, not how big it is.
 	const critical = 4
 	for i := 0; i < critical; i++ {

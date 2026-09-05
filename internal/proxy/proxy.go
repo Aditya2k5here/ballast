@@ -15,7 +15,7 @@
 // Capacity is handed out as tokens. A request that cannot get one immediately
 // waits in the queue; whoever releases a token pumps the queue and hands it to
 // the next waiter the queue chooses. That indirection is what lets the queue's
-// policy — priority, LIFO under pressure, deadline expiry — decide *which*
+// policy. Priority, LIFO under pressure, deadline expiry. Decide *which*
 // waiter proceeds, rather than the runtime's arbitrary wakeup order.
 package proxy
 
@@ -363,8 +363,8 @@ func (g *Gateway) Close() {
 // recorder buffers one attempt's response instead of streaming it.
 //
 // A retry is only honest if the failed attempt never reached the client. Once
-// a byte of a 502 has been written the retry is a lie -- the client has already
-// seen the error -- so the whole response is held until the attempt is known to
+// a byte of a 502 has been written the retry is a lie, the client has already
+// seen the error, so the whole response is held until the attempt is known to
 // be the final one. That costs a copy of the body, which for an API gateway is
 // a few kilobytes and worth it; a streaming gateway would have to give up
 // retries instead, and the trade should be made deliberately rather than by

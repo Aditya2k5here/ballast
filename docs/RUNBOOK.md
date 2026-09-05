@@ -18,7 +18,7 @@ curl -s localhost:9102/stats | jq             # the upstream's own view, if simu
 This is the gateway working. Offered load exceeds what the upstream can serve
 and the lowest-priority tier is giving way. Check `ballast_shed_total` by
 `priority` label: if `critical` is non-zero, critical traffic alone exceeds
-capacity and no shedding policy can fix that — the upstream needs to be bigger.
+capacity and no shedding policy can fix that, the upstream needs to be bigger.
 
 ## Symptom: p99 climbing, limit falling
 
@@ -31,7 +31,7 @@ correct. Look at the upstream, not the gateway. If the limit has fallen to
 ## Symptom: limit pinned at Max, latency terrible
 
 The controller believes there is no queueing. Almost always the RTT floor is
-stale — it was measured during a quiet period and everything since looks
+stale. It was measured during a quiet period and everything since looks
 proportionally fine. `FloorDecay` (default 10 s) should be shorter than the
 timescale on which the upstream's baseline latency changes.
 
@@ -52,7 +52,7 @@ consecutive 5xx. It will admit one probe every `OpenFor` (5 s) and close after
 
 `ballast_expired_in_queue_total` rising. Clients are sending deadlines shorter
 than the queue takes to clear. Either they are too impatient or the queue is too
-deep — check `ballast_queue_depth_max`. A queue deeper than
+deep. Check `ballast_queue_depth_max`. A queue deeper than
 `limit × (deadline ÷ upstream_p50)` can never be cleared in time and should be
 made smaller, so requests are refused immediately rather than after waiting.
 
@@ -64,7 +64,7 @@ Raising `RetryRatio` above ~0.2 is how a partial outage becomes a total one.
 ## Symptom: gateway slow with an idle upstream
 
 Check `ballast_queue_wait_seconds` against `ballast_upstream_duration_seconds`.
-If the wait dominates while the upstream is fast, the limit is too low — look at
+If the wait dominates while the upstream is fast, the limit is too low. Look at
 whether the controller ever sees its limit as *binding*, since it will not grow
 a limit nothing is reaching.
 
