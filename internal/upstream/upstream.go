@@ -19,6 +19,7 @@ package upstream
 
 import (
 	"encoding/json"
+	"fmt"
 	"math/rand"
 	"net/http"
 	"sync"
@@ -46,6 +47,53 @@ type Profile struct {
 	// QueueCap bounds the internal wait queue; beyond it the backend itself
 	// returns 503, which is what a real server's accept queue does.
 	QueueCap int `json:"queue_cap"`
+}
+
+// UnmarshalJSON accepts durations either as Go duration strings ("25ms") or as
+// integer nanoseconds. encoding/json only understands the second form, so an
+// operator poking /profile by hand would otherwise have to write 25000000. The
+// admin endpoint is meant to be used from a shell, so it takes what a person
+// would type.
+func (p *Profile) UnmarshalJSON(b []byte) error {
+	type plain Profile
+	aux := struct {
+		Fast   interface{} `json:"fast"`
+		Slow   interface{} `json:"slow"`
+		Jitter interface{} `json:"jitter"`
+		*plain
+	}{plain: (*plain)(p)}
+	if err := json.Unmarshal(b, &aux); err != nil {
+		return err
+	}
+	for _, f := range []struct {
+		name string
+		raw  interface{}
+		dst  *time.Duration
+	}{
+		{"fast", aux.Fast, &p.Fast},
+		{"slow", aux.Slow, &p.Slow},
+		{"jitter", aux.Jitter, &p.Jitter},
+	} {
+		if f.raw == nil {
+			continue
+		}
+		d, err := parseDuration(f.raw)
+		if err != nil {
+			return fmt.Errorf("%s: %v", f.name, err)
+		}
+		*f.dst = d
+	}
+	return nil
+}
+
+func parseDuration(v interface{}) (time.Duration, error) {
+	switch t := v.(type) {
+	case string:
+		return time.ParseDuration(t)
+	case float64:
+		return time.Duration(int64(t)), nil
+	}
+	return 0, fmt.Errorf("want a duration string like \"25ms\" or a number of nanoseconds")
 }
 
 func DefaultProfile() Profile {
